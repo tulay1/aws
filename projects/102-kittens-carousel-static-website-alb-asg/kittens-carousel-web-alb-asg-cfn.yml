@@ -55,7 +55,7 @@ Resources:
               #! /bin/bash
               yum update -y
               yum install httpd -y
-              FOLDER="https://https://github.com/tulay1/aws/blob/master/projects/102-kittens-carousel-static-website-alb-asg/static-web/
+              FOLDER="https://github.com/tulay1/aws/master/projects/102-kittens-carousel-static-website-alb-asg/static-web/
               curl -s --create-dirs -o "/var/www/html/index.html" -L "$FOLDER"index.html
               curl -s --create-dirs -o "/var/www/html/cat0.jpg" -L "$FOLDER"cat0.jpg
               curl -s --create-dirs -o "/var/www/html/cat1.jpg" -L "$FOLDER"cat1.jpg
