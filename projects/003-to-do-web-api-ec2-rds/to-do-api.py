@@ -11,12 +11,7 @@ db_endpoint = open("/home/ec2-user/dbserver.endpoint", 'r', encoding='UTF-8')
 # Configure mysql database
 app.config['MYSQL_DATABASE_HOST'] = db_endpoint.readline().strip()
 app.config['MYSQL_DATABASE_USER'] = 'admin'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'TylerCounter'
-app.config['MYSQL_DATABASE_DB'] = 'todo_db'
-app.config['MYSQL_DATABASE_PORT'] = 3306
-db_endpoint.close()
-mysql = MySQL()
-mysql.init_app(app)
+app.config['MYSQL_DATABASE_PASSWORD'] = '123456789'
 connection = mysql.connect()
 connection.autocommit(True)
 cursor = connection.cursor()
@@ -127,7 +122,7 @@ def remove_task(task):
 # and assign to the static route of ('/')
 @app.route('/')
 def home():
-    return "Welcome to Tyler's To-Do API Service"
+    return "Welcome to Tulay's To-Do API Service"
 
 
 # Write a function named `get_tasks` which returns all tasks in JSON format for `GET`,

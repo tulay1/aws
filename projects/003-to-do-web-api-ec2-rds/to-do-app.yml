@@ -19,7 +19,7 @@ Resources:
   WebServerHost:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-09d95fab7fff3776c
+      ImageId: ami-0c94855ba95c71c99
       InstanceType: t2.micro
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
@@ -37,7 +37,7 @@ Resources:
               pip3 install flask
               pip3 install flask_mysql
               echo "${MyDBURI}" > /home/ec2-user/dbserver.endpoint
-              curl -s --create-dirs -o "/home/ec2-user/app.py" -L https://raw.githubusercontent.com/TylerCounter/aws/master/projects/003-to-do-web-api-ec2-rds/to-do-api.py
+              curl -s --create-dirs -o "/home/ec2-user/app.py" -L https://raw.githubusercontent.com/tulay1/aws/master/projects/003-to-do-web-api-ec2-rds/to-do-api.py
               python3 /home/ec2-user/app.py
             - MyDBURI: !GetAtt MyDatabaseServer.Endpoint.Address
   MyDBSecurityGroup:
@@ -58,7 +58,7 @@ Resources:
       DBName: todo_db
       Engine: MySQL
       EngineVersion: 8.0.19
-      MasterUserPassword: TylerCounter
+      MasterUserPassword: 123456789
       MasterUsername: admin
       MonitoringInterval: 0
       MultiAZ: false
