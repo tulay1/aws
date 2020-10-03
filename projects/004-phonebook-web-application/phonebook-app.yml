@@ -38,9 +38,9 @@ Resources:
     Type: AWS::EC2::LaunchTemplate
     Properties: 
       LaunchTemplateData:
-        ImageId: ami-09d95fab7fff3776c
+        ImageId: ami-0947d2ba12ee1ff75
         InstanceType: t2.micro
-        KeyName: MYKEY
+        KeyName: betul
         SecurityGroupIds: 
           - !GetAtt WebServerSecurityGroup.GroupId
         TagSpecifications: 
@@ -83,12 +83,12 @@ Resources:
       SecurityGroups: 
         - !GetAtt ALBSecurityGroup.GroupId
       Subnets:
-        - subnet-28ee7865
-        - subnet-32fd453c
-        - subnet-79242e47
-        - subnet-ab37f0cd
-        - subnet-e2df12c3
-        - subnet-efa162b0
+        - subnet-4914fe16
+        - subnet-8554a0a4
+        - subnet-c46bc8ca
+        - subnet-3f947d59
+        - subnet-283f8665
+        - subnet-a79da099
       Type: application
   ALBListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
@@ -135,7 +135,7 @@ Resources:
       DBName: phonebook
       Engine: MySQL
       EngineVersion: 8.0.19
-      MasterUserPassword: TylerCounter
+      MasterUserPassword: tulay-tunca
       MasterUsername: admin
       MonitoringInterval: 0
       MultiAZ: false
